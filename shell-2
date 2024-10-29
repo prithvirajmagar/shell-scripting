@@ -1,0 +1,13 @@
+Functions: Reusable code blocks
+my_func() {
+  echo "Hello, $1"
+}
+my_func "DevOps"
+
+output:Hello, DevOps
+
+Exit Codes and Error Handling:
+cp source.txt destination.txt
+if [ $? -ne 0 ]; then
+  echo "Copy failed!"
+fi
