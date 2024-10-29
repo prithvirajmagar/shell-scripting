@@ -1,0 +1,60 @@
+name="DevOps"
+echo "Welcome to $name scripting!"
+
+Reading User Input:
+read -p "Enter your name: " user_name
+echo "Hello, $user_name!"
+
+if [ "$name" == "DevOps" ]; then
+  echo "It's a DevOps script!"
+else
+  echo "Not a DevOps script."
+fi
+
+for loop
+for i in 1 2 3; do
+  echo "Looping $i"
+done
+
+While Loop
+count=1
+while [ $count -le 3 ]; do
+  echo "Count: $count"
+  ((count++))
+done
+
+String Manipulation:
+str="Shell scripting"
+echo "${str^}" # Capitalize
+echo "${str,,}" # Lowercase
+
+Check if a file exists
+file="example.txt"
+if [ -f "$file" ]; then
+  echo "$file exists."
+fi
+Read from a File
+while IFS= read -r line; do
+  echo "$line"
+done < "$file"
+
+Log Rotation: Rotate logs to prevent overflow in systems
+log_file="/var/log/myapp.log"
+if [ -f "$log_file" ]; then
+  mv "$log_file" "${log_file}_$(date +%Y%m%d)"
+  touch "$log_file"
+fi
+
+
+User and Permission Management
+useradd newuser
+echo "password" | passwd newuser --stdin
+chown newuser:newuser /home/newuser
+
+
+
+
+
+
+
+
